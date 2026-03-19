@@ -1,0 +1,10 @@
+# Ignore everything
+/*
+
+# Un-ignore Public folder and everything in it
+!Public/
+!Public/**/
+!Public/**
+
+# Keep the gitignore itself
+!.gitignore
