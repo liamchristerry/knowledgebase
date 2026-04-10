@@ -1,3 +1,6 @@
+Tags: #linux #grub #kernal #boot #ubuntu #updates #sysadmin 
+
+---
 
 ## Older Ubuntu Versions
 	- https://old-releases.ubuntu.com/releases/

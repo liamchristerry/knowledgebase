@@ -1,4 +1,6 @@
+Tags: #linux #lvm #harddrives #raid #snapshot #ext4 #xfs #sysadmin 
 
+---
 ## LVM Hierarchy
 Physical Volume > Volume Groups > Logical Volume
 
@@ -57,6 +59,7 @@ UUID=xxxx-xxxx  /mnt/data  ext4  defaults  0  2
 ## Expanding a PV - Expanding current drive
 ```
 # 1. Rescan to detect new disk size (no reboot needed usually)
+# Run this as roo user (sudo su)
 echo 1 > /sys/class/block/sdb/device/rescan
 
 # 2.0 If using a whole disk PV, just resize the PV directly:

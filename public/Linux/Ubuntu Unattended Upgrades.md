@@ -1,3 +1,6 @@
+Tags: #linux #ubuntu #sysadmin #updates #automation
+
+---
 ### Log Files
 
 ```bash

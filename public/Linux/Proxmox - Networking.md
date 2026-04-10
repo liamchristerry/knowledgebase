@@ -1,8 +1,7 @@
-
-Tags: #proxmox #networking #linux #sysadmin #homelab #vlan #bridge
+Tags: #proxmox #networking #linux #vlan #bridge #bonding #sysadmin
 
 ---
-## Referances
+## References
 https://docs.bankai-tech.com/Proxmox/Docs/Networking/Network%20Configuration/#advanced-bridge-configurations
 ## Network Architecture Overview
 
