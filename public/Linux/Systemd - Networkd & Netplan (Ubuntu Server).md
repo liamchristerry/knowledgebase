@@ -1,5 +1,3 @@
-
-
 Tags: #linux #ubuntu #networking #systemd #networkd #netplan #sysadmin
 
 ---

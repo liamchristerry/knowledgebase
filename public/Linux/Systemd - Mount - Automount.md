@@ -1,4 +1,4 @@
-
+Tags: #linux #systemd #sysadmin #harddrives
 ## Key Rules
 
 - Unit file name **must match the mount path** — slashes become dashes

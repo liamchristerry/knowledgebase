@@ -1,4 +1,6 @@
+Tags: #linux #lvm #harddrives #raid #snapshot #ext4 #xfs #sysadmin 
 
+---
 ## LVM Hierarchy
 Physical Volume > Volume Groups > Logical Volume
 
