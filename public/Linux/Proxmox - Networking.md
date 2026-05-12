@@ -1,4 +1,4 @@
-Tags: #proxmox #networking #linux #vlan #bridge #bonding #sysadmin
+Tags: #proxmox #networking #linux #bridge #bonding #sysadmin
 
 ---
 ## References

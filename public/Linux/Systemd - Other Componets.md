@@ -1,4 +1,4 @@
-Tags: #linux #ubuntu #systemd #sysadmin #time #encryption #kernal 
+Tags: #linux #ubuntu #systemd #sysadmin #ntp #encryption #kernal 
 
 ---
 

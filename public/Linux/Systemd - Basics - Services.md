@@ -1,4 +1,4 @@
-Tags: #linux #systemd #nginx #sysadmin 
+Tags: #linux #systemd #sysadmin 
 
 ---
 ## Types of Units

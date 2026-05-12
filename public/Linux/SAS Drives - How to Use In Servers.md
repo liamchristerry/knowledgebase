@@ -1,4 +1,4 @@
-Tags: #linux #sas #harddrives #block #sysadmin
+Tags: #linux #sas #harddrives #sysadmin
 
 ---
 
