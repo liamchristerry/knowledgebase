@@ -13,9 +13,9 @@ Tags: #gpu #dell #poweredge #idrac
 - Determine what is needed for GPUs > 75W power requirements. 
 
 ## GPU Enablement Kits
-[490-BEIX - Refurbished - DELL GPU Enablement KIT](https://www.itcreations.com/product/111279?srsltid=AfmBOoq5HtRlFIoj7AES4qr4bhJwJJ9ZBSOx_KH72a6vyHWh_CYuaAO6)
+[490-BEIX - Refurbished - DELL GPU Enablement KIT](https://www.itcreations.com/product/111279)
 
-> I ordered a GPU enablement kit from a reseller from work purchasing team. What I was expecting to receive vs what I got is different
+> I ordered a refurbished GPU enablement kit through a reseller. What I expected to receive and what actually arrived were different.
 
 What I expected to be included
 - High Performance fans
@@ -41,7 +41,7 @@ This worked since riser 1 had power available already, server booted and the OS 
 # Replalce grid with whatever GPU you have
 lspci | grep -i grid
 ```
-iDrac did not detect the GPUs, it could not determine what was installed or what tempiture the cards were. After poking around online and talking to other people at work the idea of trying a standard 1U heatsink from a R640 and then use the shroud that came with the GPU enablement kit. 
+iDrac did not detect the GPUs, it could not determine what was installed or what tempiture the cards were. After some research, the next idea was to try standard 1U heatsinks from an R640 together with the shroud that came with the GPU enablement kit. 
 
 Installed the heatsinks and shroud, OS detected the GPUs still and no iDrac could see/manage the GPU. 
 

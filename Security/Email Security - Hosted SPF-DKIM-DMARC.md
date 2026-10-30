@@ -3,7 +3,7 @@ Tags: #email #security #dns #sysadmin #proofpoint
 
 This document describes how **SPF, DKIM, and DMARC** are implemented when moving email security controls to **Proofpoint Hosted Email Defense**, and how **alignment** affects DMARC pass/fail outcomes.
 
-> Proofpoint is not the only option, it is just what we are currently using
+> Proofpoint is used as the example here; other hosted email security providers follow a similar pattern.
 ---
 ## Core Email Identity Concepts (Important)
 Every email has **three relevant domain identities**:
@@ -150,14 +150,14 @@ _domainkey.example.com NS ns2-dkim.has.pphosted.com
  - Delegating `_domainkey.example.com` to Proofpoint disables ALL existing DKIM selectors. 
  - This would break any AWS SES that is being used as a sender with SES for example. Below shows a CNAME for a selector that points to SES
 ```
-3dxshqup7s4r35x5ms7nznycfxe6dih7._domainkey.example.com CNAME
-3dxshqup7s4r35x5ms7nznycfxe6dih7.dkim.amazonses.com
+abc123exampleselector._domainkey.example.com CNAME
+abc123exampleselector.dkim.amazonses.com
 ```
 
 **Proofpoint (nondelegated mode)**
 ```
-3dxshqup7s4r35x5ms7nznycfxe6dih7._domainkey.example.com CNAME
-3dxshqup7s4r35x5ms7nznycfxe6dih7._domainkey.proofpoint.com
+abc123exampleselector._domainkey.example.com CNAME
+abc123exampleselector._domainkey.proofpoint.com
 ```
 
 ---

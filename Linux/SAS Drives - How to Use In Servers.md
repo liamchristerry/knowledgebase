@@ -11,7 +11,7 @@ Disks that are used in storage arrays might be formatted in 520 Byte blocks and 
 
 When you plug in a drive that is formatted in 520 the OS will see the disk but cant use it. Below describes the process on converting the disks block size to something useable. 
 
-> Worth noting that the production lab at SE does have hardware devices that will do this for you. And will report out health of the drive and attempt to fix any issues found. 
+> Dedicated drive-reformatting appliances can also do this conversion in bulk, and typically report drive health and attempt to repair any issues they find. 
 ## Commands
 
 ```

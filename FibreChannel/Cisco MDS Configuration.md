@@ -9,7 +9,7 @@ Create aliases for each WWPN (end device) connected to the fabric.
 
 ```
 fcalias name Host1-vmhba5 vsan 200
-  member pwwn 21:00:f4:c7:aa:9d:de:ae
+  member pwwn 21:00:00:00:00:00:01:01
 ```
 
 Create zones. Each zone is scoped to a single host and its target storage ports. This example allows Host 1 to communicate with SPB FC ports 0–3.
@@ -27,7 +27,7 @@ zone name UNITY_HOST1 vsan 200
 Create a zone set and add zones to it. The zone set ties all zones together and defines what is active in the fabric.
 
 ```
-zoneset name BTC_MDF_MDS_Bottom vsan 200
+zoneset name FABRIC_B_ZS vsan 200
   member UNITY_HOST1
   member UNITY_HOST2
   member UNITY_HOST3
@@ -37,7 +37,7 @@ zoneset name BTC_MDF_MDS_Bottom vsan 200
 Activate the zone set. This pushes the configuration live into the fabric.
 
 ```
-zoneset activate name BTC_MDF_MDS_Bottom vsan 200
+zoneset activate name FABRIC_B_ZS vsan 200
 ```
 
 ---
@@ -75,44 +75,44 @@ vsan database
 
 ! Host 1
 fcalias name Host1-vmhba5 vsan 200
-  member pwwn 21:00:f4:c7:aa:9d:de:ae
+  member pwwn 21:00:00:00:00:00:01:01
 
 fcalias name Host1-vmhba6 vsan 200
-  member pwwn 21:00:f4:c7:aa:9d:de:af
+  member pwwn 21:00:00:00:00:00:01:02
 
 ! Host 2
 fcalias name Host2-vmhba5 vsan 200
-  member pwwn 21:00:f4:c7:aa:9e:b1:de
+  member pwwn 21:00:00:00:00:00:02:01
 
 fcalias name Host2-vmhba6 vsan 200
-  member pwwn 21:00:f4:c7:aa:9e:b1:df
+  member pwwn 21:00:00:00:00:00:02:02
 
 ! Host 3
 fcalias name Host3-vmhba5 vsan 200
-  member pwwn 21:00:f4:c7:aa:9e:7d:5e
+  member pwwn 21:00:00:00:00:00:03:01
 
 fcalias name Host3-vmhba6 vsan 200
-  member pwwn 21:00:f4:c7:aa:9e:7d:5f
+  member pwwn 21:00:00:00:00:00:03:02
 
 ! Host 4
 fcalias name Host4-vmhba5 vsan 200
-  member pwwn 21:00:f4:c7:aa:9a:42:be
+  member pwwn 21:00:00:00:00:00:04:01
 
 fcalias name Host4-vmhba6 vsan 200
-  member pwwn 21:00:f4:c7:aa:9a:42:bf
+  member pwwn 21:00:00:00:00:00:04:02
 
 ! Dell Unity — Storage Processor B (SPB)
 fcalias name UNITY_SPB_FC0 vsan 200
-  member pwwn 50:06:01:6C:47:E0:7F:A6
+  member pwwn 50:06:01:6C:00:00:00:01
 
 fcalias name UNITY_SPB_FC1 vsan 200
-  member pwwn 50:06:01:6D:47:E0:7F:A6
+  member pwwn 50:06:01:6D:00:00:00:01
 
 fcalias name UNITY_SPB_FC2 vsan 200
-  member pwwn 50:06:01:6E:47:E0:7F:A6
+  member pwwn 50:06:01:6E:00:00:00:01
 
 fcalias name UNITY_SPB_FC3 vsan 200
-  member pwwn 50:06:01:6F:47:E0:7F:A6
+  member pwwn 50:06:01:6F:00:00:00:01
 
 ! --- Zone Definitions ---
 
@@ -150,14 +150,14 @@ zone name UNITY_HOST4 vsan 200
 
 ! --- Zone Set ---
 
-zoneset name BTC_MDF_MDS_Bottom vsan 200
+zoneset name FABRIC_B_ZS vsan 200
   member UNITY_HOST1
   member UNITY_HOST2
   member UNITY_HOST3
   member UNITY_HOST4
 
 ! Activate the zone set
-zoneset activate name BTC_MDF_MDS_Bottom vsan 200
+zoneset activate name FABRIC_B_ZS vsan 200
 
 ! Save configuration
 copy running-config startup-config
